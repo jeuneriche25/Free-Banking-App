@@ -1,0 +1,77 @@
+.dashboard {
+  background: linear-gradient(to bottom, #1e1e1e, #2e2e2e);
+  color: white;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.account-card {
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.sub {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.amount {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.invest-banner {
+  background: #f5f5f5;
+  color: #111;
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.section h3 {
+  margin-bottom: 10px;
+}
+
+.currency-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  background: #3a3a3a;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.header {
+  background: none;
+  font-weight: bold;
+}
+
+/* .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1e1e1e;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #444;
+} */
