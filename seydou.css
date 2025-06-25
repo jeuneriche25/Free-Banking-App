@@ -1,0 +1,241 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ .card-container {
+  width: 400px;
+  height: 250px;
+  perspective: 1000px;
+  margin: auto;
+  cursor: pointer;
+} 
+
+.bg-gold {
+  background: linear-gradient(135deg, #d4af37, #f9d976);
+  color: white ;
+}
+
+.credit-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-container.flipped .credit-card-inner {
+  transform: rotateY(180deg);
+}
+
+.credit-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+} 
+
+.chip {
+  width: 50px;
+  height: 35px;
+  background: linear-gradient(135deg, #d9d9d9, #aaa);
+  border-radius: 6px;
+  box-shadow: inset -2px -2px 4px rgba(255,255,255,0.6),
+              inset 2px 2px 4px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.chip::before,
+.chip::after {
+  content: "";
+  position: absolute;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+}
+
+.chip::before {
+  top: 8px;
+  left: 6px;
+  width: 38px;
+  height: 2px;
+}
+
+.chip::after {
+  top: 14px;
+  left: 6px;
+  width: 38px;
+  height: 2px;
+}
+
+.credit-card.back {
+  transform: rotateY(180deg);
+}
+
+.stripe {
+  width: 100%;
+  background-color: #333;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.bg-gold {
+  background: linear-gradient(135deg, #d4af37, #f9d976);
+  color: white !important;
+}
+
+.bg-gold-dark {
+  background: linear-gradient(135deg, #b58900, #cfae3f);
+  color: white ;
+}
+
+.cvv-box {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.transaction-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-amount.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.transaction-amount.negative {
+  color: red;
+  font-weight: bold;
+}
+
+.chart-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.icon-circle {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+}
+
+.card-container {
+  max-width: 400px;
+  margin: auto;
+  width: 100%;
+}
+
+.credit-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 50px;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #d4af37, #f9d976); 
+  color: white;
+  transition: transform 0.5s ease;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.transaction-amount.positive {
+  color: green;
+  font-weight: bold;
+}
+
+.transaction-amount.negative {
+  color: red;
+  font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+  .credit-card {
+    padding: 40px 30px;
+  }
+  
+  .transaction-item {
+    flex-wrap: wrap;
+  }
+  
+  .transaction-amount {
+    flex-basis: 100%;
+    text-align: right;
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .credit-card {
+    padding: 30px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .transaction-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .transaction-amount {
+    font-size: 1rem;
+    text-align: right;
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  h2, h3, h4, h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .credit-card {
+    padding: 20px 15px;
+    font-size: 0.85rem;
+  }
+  
+  .transaction-item {
+    padding: 8px 0;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .transaction-category,
+  .transaction-description {
+    font-size: 0.9rem;
+  }
+  
+  .transaction-amount {
+    font-size: 1rem;
+  }
+}
