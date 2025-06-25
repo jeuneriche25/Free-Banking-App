@@ -1,0 +1,35 @@
+body { background: goldenrod; }
+.transfer-card { 
+    background: rgb(244, 244, 243); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    max-width: 400px; 
+    margin: 0 auto;
+}
+.key { 
+    cursor: pointer; 
+    transition: background 0.2s; 
+    font-size: 18px;
+}
+.key:hover { background: goldenrod; }
+button { 
+    padding: 8px 16px; 
+    margin-left: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background: #0b0b0b; 
+    color: white;
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* espace entre le logo et le texte */
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #00000030; /* petit contour optionnel */
+}
