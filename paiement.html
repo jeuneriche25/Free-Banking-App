@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paiement.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+     <div class="payment-container">
+    <h2>Paiement</h2>
+
+     <div class="order-summary">
+        <input type="text" id="exp" name="exp" placeholder="Produit:" required>
+        <input type="text" id="exp" name="exp" placeholder="Prix:" required>
+      
+    </div> 
+
+    <form>
+      <label for="fullname">Nom complet</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="cardnumber">Numéro de carte</label>
+      <input type="text" id="cardnumber" name="cardnumber" maxlength="19" placeholder=".... .... .... ...." required>
+
+      <label for="exp">Date d'expiration (MM/AA)</label>
+      <input type="text" id="exp" name="exp" placeholder="MM/AA" required>
+
+      <label for="cvc">CVV</label>
+      <input type="cvc" id="cvc" name="cvc" maxlength="3" required>
+
+      <button type="submit">Payer</button>
+    </form>
+  </div>
+</body>
+</html>
