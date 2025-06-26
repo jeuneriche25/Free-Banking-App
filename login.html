@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-     <style>
+    <style>
         :root {
             --primary-color: #DAA520;
             --secondary-color: #DAA520;
@@ -115,62 +117,75 @@
             .login-container {
                 border-radius: 12px;
             }
-            
+
             .form-container {
                 padding: 20px;
             }
         }
     </style>
-</head>
-<body>
-    
-    <div class="login-container">
-        <div class="logo">
-            <h1>africash</h1>
-        </div>
+    </head>
 
-        <div class="form-container">
-            <div class="input-group">
-                <label for="email">Adresse email</label>
-                <input type="email" id="email" placeholder="exemple@loubank.com">
+    <body>
+
+        <div class="login-container">
+            <div class="logo">
+                <h1>africash</h1>
             </div>
 
-            <div class="input-group">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" placeholder="••••••••">
-            </div>
-       
-  </div>
+            <div class="form-container">
+                <div class="input-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" placeholder="exemple@loubank.com">
+                </div>
 
-            <button class="login-btn" id="loginBtn">Se connecter</button>
-         
-              
-               <div class="signup-link">
+                <div class="input-group">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+
+            </div>
+            <button onclick="showPopup()">Se connecter</button>
+            <div id="popup" style="display:none; background:#d4edda; color:#155724; padding:10px; margin-top:10px;">
+                ✅ Connexion réussie !
+            </div>
+
+            <script>
+                function showPopup() {
+                    const popup = document.getElementById("popup");
+                    popup.style.display = "block";
+                    setTimeout(() => popup.style.display = "none", 3000);
+              }
+            </script>
+
+
+
+            <div class="signup-link">
                 pas encore client ? <a href="inscription.html">inscrivez vous</a>
             </div>
-    </div>                      
+        </div>
 
-    <script>
-        document.getElementById('loginBtn').addEventListener('click', function() {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            
-            // Validation basique
-            if (!email || !password) {
-                alert('Veuillez remplir tous les champs');
-                return;
-            }
-            
-            // Ici, vous ajouterez la logique de connexion à votre API
-            console.log('Tentative de connexion avec:', email, password);
-            
-            // Redirection temporaire (à remplacer par votre logique)
-            setTimeout(() => {
-                alert('Connexion réussie ! Redirection...');
-                // window.location.href = '/dashboard';
-            }, 1000);
-        });
-    </script>
-    
-</body>
+        <script>
+            document.getElementById('loginBtn').addEventListener('click', function () {
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+
+                // Validation basique
+                if (!email || !password) {
+                    alert('Veuillez remplir tous les champs');
+                    return;
+                }
+
+                // Ici, vous ajouterez la logique de connexion à votre API
+                console.log('Tentative de connexion avec:', email, password);
+
+                // Redirection temporaire (à remplacer par votre logique)
+                setTimeout(() => {
+                    alert('Connexion réussie ! Redirection...');
+                    // window.location.href = '/dashboard';
+                }, 1000);
+            });
+        </script>
+
+    </body>
+
 </html>

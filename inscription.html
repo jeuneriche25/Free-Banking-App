@@ -51,6 +51,22 @@
             text-align: center;
         }
 
+        .btn {
+            text-decoration: none;
+            font-size: 20px;
+            margin-left: 110Px;
+            padding: 10px;
+            border: none;
+            font-family: sans-serif;
+            background-color: #DAA520;
+            color: white;
+        }
+
+        .btn:hover {
+            cursor: pointer;
+            background-color: #333333;
+        }
+
         .logo {
             padding: 30px 0;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
@@ -87,6 +103,10 @@
             transition: border 0.3s;
         }
 
+        input:hover {
+            background-color: #ddd;
+        }
+
         .input-group input:focus {
             outline: none;
             border-color: var(--primary-color);
@@ -113,6 +133,7 @@
         .signup-link {
             margin-top: 20px;
             color: var(--dark-gray);
+            font-size: 20px;
         }
 
         .signup-link a {
@@ -146,7 +167,7 @@
     <div class="signup-container">
         <div class="logo">
             <img src="" alt="">
-            <h1>AfiCash</h1>
+            <h1>Afri<span>Cash</span></h1>
         </div>
 
         <div class="form-container">
@@ -180,8 +201,9 @@
                 <label for="confirm-password">Confirmez le mot de passe</label>
                 <input type="password" id="confirm-password" required>
             </div>
+            <a href="Astou.html" class="btn">Créer mon compte</a>
 
-            <button class="login-btn" id="signupBtn">Créer mon compte</button>
+            <!-- <button  class="login-btn" id="signupBtn">Créer mon compte</button> -->
 
             <div class="signup-link">
                 Déjà client ? <a href="login.html">Se connecter</a>
