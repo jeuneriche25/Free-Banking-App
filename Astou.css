@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #e1dddd;
+  color: #333;
+  padding-bottom: 80px;
+}
+
+.container {
+
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 30px;
+  width: 100%;
+
+}
+.card-content p{
+  margin-top: 40px;
+}
+.card {
+  border-radius: 20px;
+  padding: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.card-number{
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20%;
+}
+.card.yellow {
+  background-color: #facc15;
+  color: #111;
+  width: 40%;
+  height: 40vh;
+
+}
+
+.card.black {
+  background-color: #1f2937;
+  color: white;
+  width: 40%;
+  height: 40vh;
+}
+
+.card-content {
+  z-index: 2;
+}
+
+.label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.card-number {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.card-logo {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+
+
+.transfer-card {
+  background-color: black;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  width: 83%;
+  margin: auto;
+   margin-top: 20px;
+}
+h3{
+  margin: 20px;
+}
+
+.transfer-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  /* border-bottom: 1px solid #eee; */
+  font-size: 14px;
+  color: white;
+}
+
+/* .transfer-row-1{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  /* border-bottom: 1px solid #eee;  */
+/* !  font-size: 14px; 
+  color: white; */
+/* }  */
+*/ .transfer-row:last-child {
+  border-bottom: none;
+}
+
+.currency {
+  font-weight: bold;
+  color: #6b21a8;
+}
+
+.message {
+  color: white;
+}
+
+.transfer-card-1 {
+  background-color: rgb(96, 111, 116);
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  width: 83%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+/* .transactions h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.transaction {
+  background-color: black;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.s{
+    flex-direction: ;
+} */
+.title {
+  font-weight: 600;
+}
+
+.date {
+  font-size: 13px;
+  color: gray;
+}
+
+.amount {
+  font-weight: bold;
+}
+
+.amount.plus {
+  color: green;
+}
+
+.amount.minus {
+  color: red;
+}
+
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid #ddd;
+}
+
+.navbar button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  color: gray;
+}
+
+.navbar button.active {
+  color: hsl(272, 18%, 84%);
+  font-weight: bold;
+}
