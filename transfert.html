@@ -1,65 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="transfert.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-      <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 20px; }
-        .header { display: flex; justify-content: space-between; align-items: center; }
-        .transfer-card { background: #f5f5f5; padding: 20px; border-radius: 10px; }
-        .keypad { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 20px; }
-        .key { background: #fff; border: 1px solid #ddd; padding: 15px; text-align: center; border-radius: 5px; }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .transfer-card {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .key {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
     </style>
-</head>
-<body>
-   <div class="header">
-    <img src="Free Logo.png" alt="Logo Africa Cash" class="logo">
-    <h1></h1>
-</div>
+    </head>
 
+    <body>
+        <div class="container">
+            <!-- aminata -->
+            <div class="container-amine">
+                <div class="logo-container">
+                    <img src="img/logo.png" alt="Logo Africash" class="logo">
+                    <h1><span>AFRI</span>CASH</h1>
+                </div>
 
-    <div class="transfer-card">
-        <h2>Transfer</h2>
-        <div>
-            <p>...6977 → Maya</p>
-            <input type="text" placeholder="$ 15" id="amount">
-            <p>VISA Visa $5,200.15 ...6534</p>
+                <nav>
+                    <a href="Astou.html">Profil</a>
+                    <a href="seydou.html">Ma carte & Historique</a>
+                    <a href="budget.html">Budget</a>
+                    <a href="paiement.html">Paiement</a>
+                    <a href="mouhamed.html">Chatbot</a>
+                </nav>
+            </div>
+            <div class="header">
+                <img src="Free Logo.png" alt="Logo Africa Cash" class="logo">
+                <h1></h1>
+            </div>
+            <div class="transfer-card">
+                <h2>Transfer</h2>
+                <div>
+                    <p>...6977 → Maya</p>
+                    <input type="text" placeholder="$ 15" id="amount">
+                    <p>VISA Visa $5,200.15 ...6534</p>
+                </div>
+
+                <div class="keypad">
+                    <div class="key" onclick="addToAmount('1')">1</div>
+                    <div class="key" onclick="addToAmount('2')">2</div>
+                    <div class="key" onclick="addToAmount('3')">3</div>
+                    <div class="key" onclick="addToAmount('4')">4</div>
+                    <div class="key" onclick="addToAmount('5')">5</div>
+                    <div class="key" onclick="addToAmount('6')">6</div>
+                    <div class="key" onclick="addToAmount('7')">7</div>
+                    <div class="key" onclick="addToAmount('8')">8</div>
+                    <div class="key" onclick="addToAmount('9')">9</div>
+                    <div class="key" onclick="addToAmount('0')">0</div>
+                    <div class="key" onclick="clearAmount()">C</div>
+                    <div class="key" onclick="sendTransfer()">Send</div>
+                </div>
+            </div>
+
+            <script>
+                function addToAmount(num) {
+                    const amountField = document.getElementById('amount');
+                    amountField.value += num;
+                }
+                function clearAmount() {
+                    document.getElementById('amount').value = '';
+                }
+                function sendTransfer() {
+                    const amount = document.getElementById('amount').value;
+                    alert(`Transfer sent: $${amount}`);
+                    // Ici, tu ajouteras un appel API vers ton backend
+                }
+            </script>
         </div>
-        
-        <div class="keypad">
-            <div class="key" onclick="addToAmount('1')">1</div>
-            <div class="key" onclick="addToAmount('2')">2</div>
-            <div class="key" onclick="addToAmount('3')">3</div>
-            <div class="key" onclick="addToAmount('4')">4</div>
-            <div class="key" onclick="addToAmount('5')">5</div>
-            <div class="key" onclick="addToAmount('6')">6</div>
-            <div class="key" onclick="addToAmount('7')">7</div>
-            <div class="key" onclick="addToAmount('8')">8</div>
-            <div class="key" onclick="addToAmount('9')">9</div>
-            <div class="key" onclick="addToAmount('0')">0</div>
-            <div class="key" onclick="clearAmount()">C</div>
-            <div class="key" onclick="sendTransfer()">Send</div>
-        </div>
-    </div>
 
-    <script>
-        function addToAmount(num) {
-            const amountField = document.getElementById('amount');
-            amountField.value += num;
-        }
-        function clearAmount() {
-            document.getElementById('amount').value = '';
-        }
-        function sendTransfer() {
-            const amount = document.getElementById('amount').value;
-            alert(`Transfer sent: $${amount}`);
-            // Ici, tu ajouteras un appel API vers ton backend
-        }
-    </script>
-    
-</body>
+
+    </body>
+
 </html>
